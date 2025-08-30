@@ -1,7 +1,10 @@
 import os
+from dotenv import load_dotenv
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
+
+load_dotenv()
 
 DB_USER = os.getenv("MYSQL_USER", "app")
 DB_PASS = os.getenv("MYSQL_PASSWORD", "app")
