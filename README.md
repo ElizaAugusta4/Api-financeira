@@ -33,14 +33,6 @@ A API Financeira oferece recursos para gerenciamento completo de operações fin
 
 ## Instalação
 
-### Usando Docker (Recomendado)
-
-```bash
-git clone https://github.com/elizaaugusta4/api-financeira.git
-cd api-financeira
-docker-compose up -d
-```
-
 ### Instalação Local
 
 ```bash
@@ -52,11 +44,6 @@ pip install -r requirements.txt
 Configure as variáveis de ambiente para conexão com o banco MySQL.
 
 ## Uso
-
-### Com Docker
-```bash
-docker-compose up -d
-```
 
 ### Localmente
 ```bash
@@ -114,8 +101,6 @@ api-financeira/
 │   ├── database.py     # Configuração do banco de dados
 │   ├── models.py       # Modelos SQLAlchemy
 │   └── schemas.py      # Schemas Pydantic
-├── docker-compose.yml  # Orquestração dos containers
-├── Dockerfile         # Imagem da aplicação
 ├── requirements.txt   # Dependências Python
 └── README.md         # Documentação
 ```
