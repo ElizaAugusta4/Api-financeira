@@ -27,7 +27,6 @@ A API Financeira oferece recursos para gerenciamento completo de operações fin
 - **FastAPI** - Framework web moderno e rápido para Python
 - **SQLAlchemy** - ORM para Python
 - **MySQL** - Banco de dados relacional
-- **Docker** - Containerização da aplicação
 - **Pydantic** - Validação de dados
 - **Uvicorn** - Servidor ASGI
 
@@ -50,11 +49,9 @@ Configure as variáveis de ambiente para conexão com o banco MySQL.
 uvicorn app.app:app --host 0.0.0.0 --port 8000
 ```
 
-Acesse `http://localhost:8888` para utilizar a API (Docker) ou `http://localhost:8000` (local).
-
 A documentação interativa estará disponível em:
-- Swagger UI: `http://localhost:8888/docs`
-- ReDoc: `http://localhost:8888/redoc`
+- Swagger UI: `http://localhost:8000/docs`
+- ReDoc: `http://localhost:8000/redoc`
 
 ## Endpoints
 
@@ -109,14 +106,14 @@ api-financeira/
 
 #### Criar uma conta
 ```bash
-curl -X POST "http://localhost:8888/accounts" \
+curl -X POST "http://localhost:8000/accounts" \
      -H "Content-Type: application/json" \
      -d '{"name": "Conta Principal", "description": "Minha conta principal"}'
 ```
 
 #### Criar uma transação
 ```bash
-curl -X POST "http://localhost:8888/transactions" \
+curl -X POST "http://localhost:8000/transactions" \
      -H "Content-Type: application/json" \
      -d '{
        "account_id": 1,
@@ -129,7 +126,7 @@ curl -X POST "http://localhost:8888/transactions" \
 
 #### Consultar saldo
 ```bash
-curl "http://localhost:8888/accounts/1/balance"
+curl "http://localhost:8000/accounts/1/balance"
 ```
 
 ## Licença
